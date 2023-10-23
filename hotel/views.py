@@ -3,7 +3,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def inicio(request):
-    return HttpResponse('<h1>BIENVENIDO A HOTEL LODGING </h1>')
+     return render(request,'paginas/index2.html')
 
 def index(request):
     return render(request, 'paginas/index.html')
@@ -12,3 +12,14 @@ def index(request):
 def usuarios(request):
     return render(request, 'usuarios/index2.html')
 
+
+def crear(request):
+    return render(request, 'usuarios/crear.html')
+
+
+
+def editar(request):
+    return render(request, 'usuarios/editar.html')
+
+
+   

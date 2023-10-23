@@ -5,7 +5,7 @@
 {% block contenido %}  
 <div class="card">
     <div class="card-header">
-        listar usuarios
+        <a name="" id="" class="btn btn-success" href="{% url 'crear' %}" role="button">Agregar nuevo usuarios</a>
     </div>
     <div class="card-body">
         <h4 class="card-title">usuarios</h4>
@@ -26,7 +26,9 @@
                         <td>maria</td>
                         <td>ghii</td>
                         <td>1</td>
-                        <td>Editar | Borrar</td>
+                        <td><a name="" id="" class="btn btn-info" href="{% url 'editar' %}" role="button">Editar</a>
+                            <a name="" id="" class="btn btn-danger" href="#" role="button">Borrar</a>
+                        </td>
                     </tr>
                     
                 </tbody>

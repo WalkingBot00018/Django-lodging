@@ -3,5 +3,16 @@
 {% block titulo %} Editar Usuario {% endblock %}
 
 {% block contenido %}  
-    formulario para agregar a usuario
+<div class="card">
+    <div class="card-header">
+        editar un usuario
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos de usuario</h4>
+        {% include 'usuarios/form.html' %}
+    </div>
+    <div class="card-footer text-muted">
+        
+    </div>
+</div>  
 {% endblock %}
