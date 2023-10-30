@@ -1,8 +1,16 @@
+from typing import Any
 from django.db import models
 
 # Create your models here.
 class usuarios(models.Model):
-    Nombre=models.CharField(max_length= 38, null=True)
-    Direccion=models.CharField(max_length= 20, null=True)
-    Telefono=models.CharField(max_length= 21, null=True)
-    contrasena=models.CharField(max_length=21, null=True)
+    Nr_doc=models.IntegerField(primary_key=True)
+    Nombre=models.CharField(max_length=38, null=True)
+    Contraseña=models.CharField(max_length=38, null=True)
+    Id_rol=models.CharField(max_length=38, null=True)    
+
+    def __str__(self):
+        fila= "Nombre: " + self.Nombre + " - " + "Id_rol: " + self.Id_rol
+        return fila
+    def delete(self, using: None, keep_parents=False):
+        self.Nombre.storage.delete(self.Nombre)
+        super().delete()

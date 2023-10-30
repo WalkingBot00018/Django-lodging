@@ -21,15 +21,19 @@
                     </tr>
                 </thead>
                 <tbody>
+
+                    {% for usuarios in usuario_list %}
                     <tr class="">
-                        <td scope="row">1345</td>
-                        <td>maria</td>
-                        <td>ghii</td>
-                        <td>1</td>
-                        <td><a name="" id="" class="btn btn-info" href="{% url 'editar' %}" role="button">Editar</a>
-                            <a name="" id="" class="btn btn-danger" href="#" role="button">Borrar</a>
+                        <td scope="row">{{ usuarios.Nr_doc }}</td>
+                        <td>{{ usuarios.Nombre }}</td>
+                        <td>{{ usuarios.Contraseña }}</td>
+                        <td>{{ usuarios.Id_rol }}</td>
+                        <td><a name="" id="" class="btn btn-info" href="{% url 'editar' usuarios.Nr_doc %}" role="button">Editar</a>
+                            <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' usuarios.Nr_doc %}" role="button">Borrar</a>
+
                         </td>
                     </tr>
+                    {% endfor %}
                     
                 </tbody>
             </table>
